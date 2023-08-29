@@ -28,3 +28,7 @@ users_blueprint.add_url_rule(
     'users',
     view_func=Users.as_view("users")
 )
+
+users_blueprint.add_url_rule(
+    'users<user_id>', view_func=UsersID.as_view("users_id")
+)
